@@ -10,18 +10,20 @@ A template project for quickly setting up web projects that try to conform to [H
 
 Use a virtualenv or don't, i'm not the police.
 
+- dependencies:
+    - python:
+        - fastapi[standard]
+    - htmx
+
 ```bash
-$ # install python dependencies
-$ make python
-$ # install htmx
-$ make htmx
+$ make setup
 ```
 
 # Run
 
 ```bash
 $ # testing
-$ fastapi dev app.py
+$ make dev
 $ # production
-# fastapi run app.py --host 0.0.0.0 --port 80
+$ sudo fastapi run app.py --host 0.0.0.0 --port 80
 ```
