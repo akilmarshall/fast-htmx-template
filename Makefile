@@ -3,7 +3,7 @@ setup:
 	make python
 	make tailwindcss
 
-htmx:
+htmx: static
 	wget https://unpkg.com/htmx.org@2.0.4/dist/htmx.min.js -O static/htmx.min.js
 
 python:
@@ -17,9 +17,11 @@ tailwindcss:
 dev:
 	fastapi dev app.py --port 8125
 
-css:
+css: static
 	./tailwindcss --input input.css --output static/styles.css
 
-
-css-watch:
+css-watch: static
 	./tailwindcss --input input.css --output static/styles.css --watch
+
+static:
+	mkdir static
