@@ -14,6 +14,7 @@ Use a virtualenv or don't, i'm not the police.
     - python:
         - fastapi[standard]
     - htmx
+    - tailwindcss cli
 
 ```bash
 $ make setup
